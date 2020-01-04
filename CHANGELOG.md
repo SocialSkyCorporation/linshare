@@ -1,3 +1,59 @@
+# [2.3.2](https://github.com/linagora/linshare/compare/2.3.1...2.3.2) (2019-11-13) [Download link](http://download.linshare.org/versions/2.3.2/)
+
+**The 2.3.2 release of LinShare is out**
+
+> **NB :**
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+* **core** : 2.3.2 - [changelog](https://github.com/linagora/linshare-core/compare/2.3.1...2.3.2)
+* **ui-user** : 2.3.2 - [changelog](https://github.com/linagora/linshare-ui-user/compare/v2.3.1...v2.3.2)
+
+####  Bug fixes and improvments
+
+  * Core:
+    * Fix domain purge batch
+    * Fix user deletion after domain purge
+    * Improve guest complexity password
+    * Fix conctats menu not diplayed for guest user
+    * Fix the rejection of the '@' on upload document
+    * Fix delete publicKey
+    * Add pem support for public keys
+    * Fix LS sql script upgrade 2.2 to 2.3
+    * Fix download workgroup document
+    * Fix download archive for revisions
+    * Add missing endpoints for delegation v2 api
+    * Fix delete and update for workgroup pattern
+
+  * UI-User:
+    * Upgrade bower to the latest and safe release
+    * Fix anonymous download when download attribute is not available
+
+
+# [2.3.1](https://github.com/linagora/linshare/compare/2.3.0...2.3.1) (2019-09-03) [Download link](http://download.linshare.org/versions/2.3.1/)
+
+**The 2.3.1 release of LinShare is out**
+
+> **NB :**
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+* **core** : 2.3.1 - [changelog](https://github.com/linagora/linshare-core/compare/2.3.0...2.3.1)
+* **ui-admin** : 3.3.1 - [changelog](https://github.com/linagora/linshare-ui-admin/compare/v3.3.0...v3.3.1)
+* **ui-user** : 2.3.1 - [changelog](https://github.com/linagora/linshare-ui-user/compare/v2.3.0...v2.3.1)
+
+####  Bug fixes and improvments
+
+  * Core:
+    * Fixing the Upgrade task __UPDATE_DOCUMENT_STRUCTURE_FOR_VERSIONING__
+    * Improve documentation about document batches
+    * Fix outdated LinShare license link.
+
+  * UI-User:
+    * Fix outdated LinShare license link.
+
+  * UI-Admin:
+    * Fix outdated LinShare license link.
+
+
 # [2.3.0](https://github.com/linagora/linshare/compare/2.2.0...2.3.0) (2019-06-19) [Download link](http://download.linshare.org/versions/2.3.0/)
 
 **The 2.3.0 release of LinShare is out**
@@ -116,8 +172,112 @@ All screenshots are available [here](http://download.linshare.org/screenshots/2.
 ```
 /linshare/webservice/rest/user/v2/shared_spaces/{uuid}/members/{memberUuid}
 ```
+<a name="2.2.6"></a>
+# [2.2.6](https://github.com/linagora/linshare/compare/2.2.5...2.2.6) (2019-09-03) [Download link](http://download.linshare.org/versions/2.2.6/)
 
+**The 2.2.6 release of LinShare is out**
 
+## LinShare components
+
+* **core** : 2.2.6 [changelog](https://github.com/linagora/linshare-core/compare/2.2.5...2.2.6)
+* **ui-admin** : 3.2.3 [changelog](https://github.com/linagora/linshare-ui-admin/compare/v3.2.2...v3.2.3)
+* **ui-user** : 2.2.5 [changelog](https://github.com/linagora/linshare-ui-user/compare/v2.2.3...v2.2.5)
+
+> **NB :**
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+### Minor features and fixes
+* Core
+  * Improve the documentation of batches for unused files deletion.
+  * Fix and improve the migration of oldAuditLogEntry to a basicStatistics.
+  * Fix outdated LinShare license link
+
+* UI-User
+  * Fix! When switching between Ruby-Sass and Node-Sass, the theme files are not taken on consideration.
+  * Fix outdated LinShare license link
+
+* UI-Admin
+  * Update x-unit directive of domain quota.
+  * Add an error handler for ReadableSize filter.
+  * Fix outdated LinShare license link
+
+<a name="2.2.5"></a>
+# [2.2.5](https://github.com/linagora/linshare/compare/2.2.3...2.2.5) (2019-04-29) [Download link](http://download.linshare.org/versions/2.2.5/)
+
+**The 2.2.5 release of LinShare is out**
+
+## LinShare components
+
+* **core** : 2.2.5 [changelog](https://github.com/linagora/linshare-core/compare/2.2.3...2.2.5)
+* **ui-admin** : 3.2.2 [changelog](https://github.com/linagora/linshare-ui-admin/compare/v3.2.1...v3.2.2)
+* **ui-user** : 2.2.3 [changelog](https://github.com/linagora/linshare-ui-user/compare/v2.2.2...v2.2.3)
+* **thumbnail-server** : 2.0.3
+* **linshare-plugin-thunderbird** : 1.8.0
+
+> **NB :**
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+### Minor features and fixes
+* Core
+  * Fix bug related to delete expired shares.
+  * Fix MailAttachement injection: if its identifier is not found in the mail content it won't be injected.
+  * Fix upgrade task UPGRADE_2_2_MIGRATE_THREAD.
+  * Replace Antisamy library by new library to sanitize html injections in upload share email notification.
+  * Private keys are now revealed only in trace mode.
+  * Add full flat mode flag to WorkGroupNodeRestServiceImpl.
+  * Add AOP for transaction for safe facade.
+  * Fix create permission for safe role in workgroup node RAC.
+  * Use safeDocumentFacade for uploading file with Safe role.
+  * Fix upload with RIC (using safe role).
+  * Fix Statistic daily batch when user is purged.
+  * Fix update domainQuota, default-quota can't be over quota in the same domain.
+
+* UI-User
+  * Fix copy rights in workgroups
+  * Fix russian translation of relative time (last time file edition)
+  * Search filter:
+      * New property added authorNameTranslated for audit items
+      * This property is now used to filter the table on search
+      * Use the event translateChangeSuccess to trigger translation
+  * Fix the translation of audit list on change language
+  * Fix audit information : Avoid access to treePath on non-existing property
+  * Use angular translate in filter box
+  * Add browse template Vitnameese translation and some other keys
+  * Enforce email format when setting a contactList contact
+  * Fix bug of deleting selected workgroups
+  * Fix dropdown for the bottom of the list
+  * Prevent copying files to personal space for users with wrong rights
+  * Add file size audit value in details of creation action
+  * Remove ruby-sass and use node-sass
+  * Hide create-contact-list-from-workgroup-members when the functionality is disabled
+  * Fixes of Autocomplete: Redirect to create a guest if functionality is enabled and improve error's management
+  * Fixes : resetPassword:
+      * Fix issue with html which was preventing element to be added in the DOM
+      * Remove complexity in favor of translate directive
+  * Fix the russian translation in the notification pop up
+  * Remove MaterialAdmin controller:
+      * Use device detector instead for mobile mode
+      * Move sidebar toggle logic in UiUserMainController
+      * Remove useless complexity of toggleSidebarDirective
+  * Fix welcome message translation on language change
+  * Add the French translation for the action refresh for the toaster alert
+  * Fix long name display in dropdown list
+  * Add max file size in the detail of a workgroup
+  * Add dependencies between the resolver
+  * Remove css property who shift the calendar and dropdown menu
+  * Fix build Date locales
+
+* UI-Admin
+  * Manage Can create guest for users.
+  * Show file size in audit trace when available.
+  * Russian Translation for email activation keys.
+  * Add the tab for Russian to the tabs managment of Mail layout and Mail footer
+  * Fix translation of language selector.
+  * MailContent preview: Change layout
+  * Russian translation added to welcome message and mail content
+  * Upgrade bower to the latest version.
+
+<a name="2.2.4"></a>
 # [2.2.4](https://github.com/linagora/linshare/compare/2.2.3...2.2.4) (2019-04-29) [Download link](http://download.linshare.org/versions/2.2.4/)
 
 **The 2.2.4 release of LinShare is out**
@@ -390,6 +550,75 @@ All screenshots are available [here](http://download.linshare.org/screenshots/2.
   * Upgraded to Swagger JAXRS 1.3.13
   * Upgraded to Thymeleaf 3.0.9
 
+# [2.1.6](https://github.com/linagora/linshare/compare/2.1.4...2.1.6) (2019-09-09) [Download link](http://download.linshare.org/versions/2.1.6/)
+
+**The 2.1.6 release of LinShare is out**
+
+## LinShare components
+
+* **core** : 2.1.6 [changelog](https://github.com/linagora/linshare-core/compare/2.1.4...2.1.6)
+* **ui-user** : 2.1.6 [changelog](https://github.com/linagora/linshare-ui-user/compare/v2.1.4...v2.1.6)
+* **ui-admin** : 3.1.5 [changelog](https://github.com/linagora/linshare-ui-admin/compare/v3.1.4...v3.1.5)
+
+**NB:**
+
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+### Minor features and fixes
+
+* Core:
+
+  * Fix out-dated LinShare licence link
+  * Fix and Improve the documentation related to documents cleaner batches on default properties file
+  * Fix the PostgrSQL ls_prechecks procedure on LinShare migration scripts 
+  * Fix bug related to delete expired shares
+  * Refactor the batches code source related to documents cleaning
+  * Replace deprecated antisamy library by new library to sanitize html injections 
+  * Improve security against HTML injections in upload share email notification
+  * Make private keys revealable only in trace mode
+
+* UI-User:
+   * Fix out-dated LinShare licence link
+   * Fix user Long name displaying in dropdown list on ui-user in my-space interface  
+   * Fix autocomplete item html template and related css
+
+uI-Admin:
+   * Fix out-dated LinShare licence link
+   * Switch to node-saas library that provides binding for Node.js to LibSass
+   * Hide the domain order menu
+
+
+<a name="2.1.4"></a>
+# [2.1.4](https://github.com/linagora/linshare/compare/2.1.3...2.1.4) (2019-02-06) [Download link](http://download.linshare.org/versions/2.1.4/)
+
+**The 2.1.4 release of LinShare is out**
+
+## LinShare components
+
+* **core** : 2.1.4 [changelog](https://github.com/linagora/linshare-core/compare/2.1.3...2.1.4)
+* **ui-user** : 2.1.4
+* **ui-admin** : 3.1.3
+
+**NB:**
+
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+### Minor features and fixes
+
+* Core:
+
+  * Fix NullPointerException accessing shareEntryGroup
+  * Fix the garbage collector running time
+  * Fix purge domain
+  * Remove thumbnail uuid if file does not exist in datastore during upgrade
+  * Add catch clause when underlying file is missing when computing sha256sum.
+  * Upgrade jackson to 2.9.8
+  * Fix fileDataStore upgrade task.
+  * Add a new check to avoid upgrading LinShare without completing upgrade
+  * Update default quota when default quota override is null.
+
+* User:
+  * Fix HTML Sidebar on guest view
 
 <a name="2.1.3"></a>
 # [2.1.3](https://github.com/linagora/linshare/compare/2.1.2...2.1.3) (2018-05-28) [Download link](http://download.linshare.org/versions/2.1.3/)
@@ -584,9 +813,84 @@ Upload and share big files in your own personal space.
 A lot of work was done to improve LinShare performances for Edge, Chrome and
 Firefox.
 
-
 All screenshots are available [here](http://download.linshare.org/screenshots/linshare-ui-user/2.1.0/)
 
+<a name="2.0.7"></a>
+# [2.0.7](https://github.com/linagora/linshare/compare/2.0.6....2.0.7) (2019-09-03) [Download link](http://download.linshare.org/versions/2.0.7/)
+
+**The 2.0.7 release of LinShare is out**
+
+## LinShare components
+
+* **core** : 2.0.7 [changelog](https://github.com/linagora/linshare-core/compare/2.0.6...2.0.7)
+* **ui-user** : 2.0.6 [changelog](https://github.com/linagora/linshare-ui-user/compare/v2.0.5...v2.0.6)
+
+**NB:**
+
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+### Minor features and fixes
+
+* Core:
+
+  * Fix out-dated LinShare licence link 
+  * Fix and Improve the documentation related to documents cleaner batches on default properties file
+  
+* UI-User:
+
+  * Fix out-dated LinShare licence link 
+
+<a name="2.0.6"></a>
+# [2.0.6](https://github.com/linagora/linshare/compare/2.0.5....2.0.6) (2019-07-02) [Download link](http://download.linshare.org/versions/2.0.6/)
+
+**The 2.0.6 release of LinShare is out**
+
+## LinShare components
+
+* **core** : 2.0.6 [changelog](https://github.com/linagora/linshare-core/compare/2.0.5...2.0.6)
+
+**NB:**
+
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+### Minor features and fixes
+
+* Core:
+
+  * Fix bug related to delete expired shares and refactor the batches related to documents cleaning
+  * Replace deprecated antisamy library by new library to sanitize html injections and Fix HTML injection in upload share email notification
+  * Fix Statistic daily batch when user is purged
+
+
+<a name="2.0.5"></a>
+# [2.0.5](https://github.com/linagora/linshare/compare/2.0.4....2.0.5) (2019-02-07) [Download link](http://download.linshare.org/versions/2.0.5/)
+
+**The 2.0.5 release of LinShare is out**
+
+## LinShare components
+
+* **core** : 2.0.5 [changelog](https://github.com/linagora/linshare-core/compare/2.0.4...2.0.5)
+* **ui-user** : 2.0.5 [changelog](https://github.com/linagora/linshare-ui-user/compare/v2.0.4...v2.0.5)
+* **ui-admin** : 3.0.4
+
+**NB:**
+
+You can find the upgrade documentation [here](documentation/EN/upgrade).
+
+### Minor features and fixes
+
+* Core:
+
+  * Mail notification : fix share url for recipients
+  * Fix Unprotect logout endpoints.
+  * Fix NullPointerException accessing shareEntryGroup
+  * Remove thumbnail uuid if file does not exist in datastore during upgrade
+  * Add catch clause when underlying file is missing when computing sha256sum.
+  * Fix fileDataStore upgrade task.
+  * Update default quota when default quota override is null.
+
+* User:
+  * Fix typo in anonymous page
 
 <a name="2.0.4"></a>
 # [2.0.4](https://github.com/linagora/linshare/compare/2.0.3...2.0.4) (2017-12-07) [Download link](http://download.linshare.org/versions/2.0.4/)
